@@ -1,0 +1,7 @@
+Chal flow: 
+1. Each image has exif data which contains a part of the story
+2. Compiling each frame gives out the url "http://tiny.cc/rosvdz"
+3. Url contains an image which has 14 pixel values in the middle
+4. Combining hex values results in flag
+
+Flag: rooters{WHY_4R3_TH3_W4Y_TH4T_Y0U_4R3!}ctf
