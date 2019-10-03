@@ -1,0 +1,10 @@
+Challenge Flow:
+1. LSB steganography in audio file
+2. Using audio_dec.py we get a url :http://tiny.cc/72nwdz
+3. The url has a data file
+4. The data file has text which is reversed
+5. Reversing it again would provide hex for a png
+6. Saving the hex as a png image will provide the flag. 
+
+Flag: rooters{pyth0n_is_aw3s0m3}ctf
+
