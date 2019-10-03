@@ -1,4 +1,5 @@
 Chal flow: 
+Images stored at : https://mega.nz/#F!PCZXRQCY!pFQwZpifHdwlz9l9wQtpVw 
 1. Each image has exif data which contains a part of the story
 2. Compiling each frame gives out the url "http://tiny.cc/rosvdz"
 3. Url contains an image which has 14 pixel values in the middle
