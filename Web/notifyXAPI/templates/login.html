@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>Login</title>
+</head>
+
+<body>
+
+    <form method="post" action="{{ url_for('notify.login') }}">
+        <div>
+            <input type="email" name="email" value="admin@test.com"/>
+            <input type="password" name="password" value="12345"/>
+            <input type="submit" value="Sign In" placeholder="Sign In"/>
+        </div>
+    </form>
+</body>
+
+</html>

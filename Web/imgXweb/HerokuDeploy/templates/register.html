@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST" action="{{ url_for('register') }}">
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Join Today</legend>
+                {% if error %}
+                <div class="form-group is-invalid">
+                  <div class="invalid-feedback">
+					<span>{{ error }}</span>
+                  </div>
+                </div>
+                {% endif %}
+                <div class="form-group">
+                	<span class="form-control-label">Username</span>
+					<input class="form-control "type="text" name="username" placeholder="username" autocomplete="off">
+                </div>
+                <div class="form-group">
+                	<span class="form-control-label">Password</span>
+                	<input class="form-control" type="password" name="password" placeholder="password">  
+                </div>
+            </fieldset>
+            <div class="form-group">
+            	<button type="submit" class="btn btn-outline-info">Register</button>
+            </div>
+        </form>
+    </div>
+    <div class="border-top pt-3">
+        <small class="text-muted">
+            Already Have An Account? <a class="ml-1" href="{{ url_for('login') }}">Sign In</a>
+        </small>
+    </div>
+{% endblock content %}
