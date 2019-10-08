@@ -1,0 +1,8 @@
+1. The text file contains a token and a key 
+2. Using the challenge name, we can find the type of other digestives in Italian. 
+3. Cipher used fernet cipher, which uses AES-CBC 128.
+
+flag : rooters{d!g3st!f_th4t_d!g3sts_y0ur_m3ss4g3s}ctf
+
+Challenge name : Digene 
+Challenge Description : I wish there was something Italian to cure me! 
