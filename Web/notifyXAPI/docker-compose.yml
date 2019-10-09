@@ -1,9 +1,9 @@
 version: "3"
 
 services:
-  iloveflask:
+  notifyxapi:
     build: .
+    container_name: notifyXAPI
     ports:
-      - 5050:8080
+      - 7070:8080
     restart: always
-    container_name: iloveflask
