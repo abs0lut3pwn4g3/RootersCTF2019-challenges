@@ -10,4 +10,4 @@ RUN chown -R root:vuln /home/vuln/
 RUN chmod -R 750 /home/vuln/
 EXPOSE 4444
 USER vuln
-CMD /home/vuln/vuln
+CMD socat -T10 TCP-LISTEN:4444,reuseaddr,fork EXEC:/home/vuln/vuln
