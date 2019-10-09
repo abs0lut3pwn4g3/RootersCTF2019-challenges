@@ -78,7 +78,7 @@ $ curl -X POST "https://notifyxapi.rootersctf.in/api/v1/login/" -H "Content-Type
 								https://flask-jwt-extended.readthedocs.io/en/latest/basic_usage.html</a></blockquote>
 						<pre class="content-section codeblock">
 $ export ACCESS="j.w.t"
-$ curl -H "Authorization: Bearer $ACCESS" "https://notifyxapi.rootersctf.in/api/v1/notifications/"
+$ curl -H "Authorization: Bearer $ACCESS" -H "Content-Type: application/json" "https://notifyxapi.rootersctf.in/api/v1/notifications/"
 							</pre>
 					</div>
 

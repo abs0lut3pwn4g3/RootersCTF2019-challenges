@@ -4,7 +4,7 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 
 class BaseConfig:
 
-    DOMAIN = 'https://notifyxapi.herokuapp.com/api/v1/'
+    DOMAIN = 'https://notifyxapi.rootersctf.in/api/v1/'
 
     MARSHMALLOW_STRICT = True
     MARSHMALLOW_DATEFORMAT = 'rfc'
@@ -22,7 +22,6 @@ class BaseConfig:
     JWT_HEADER_NAME = 'authorization'
 
     JSON_SORT_KEYS = False 
-
 
 class Config(BaseConfig):
     

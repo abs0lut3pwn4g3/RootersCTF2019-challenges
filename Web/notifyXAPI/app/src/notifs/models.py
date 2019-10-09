@@ -3,7 +3,6 @@
 from src import db
 from datetime import datetime
 from src.utils import BaseMixin, ReprMixin
-# from src.users.models import User
 
 ''' Notifications Table '''
 
@@ -14,7 +13,7 @@ class Notification(BaseMixin, ReprMixin, db.Model):
     body = db.Column(db.String(250), nullable=False)
     issuer_id = db.Column(db.ForeignKey('user.id'), nullable=False)
 
-    issuer = db.relationship('User', foreign_keys=[issuer_id], back_populates='notifications', lazy='subquery')
+    issuer = db.relationship('User', foreign_keys=[issuer_id], back_populates='notifications')
 
     def __init__(self, title, body, issuer_id):
       self.title = title

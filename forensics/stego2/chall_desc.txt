@@ -1,9 +1,9 @@
-Challenge name: TBA
-Challenge Desc : TBA
+Challenge name : Mind Awake Body Asleep
+Challenge Desc : Everything visible has a flip side, like a coin. 
 
 
 Challenge Flow:
-1. LSB steganography in audio file
+1. LSB steganography in audio file :https://mega.nz/#!DKhjQQRB!JclxIeRNGnFOuCNEqM3Z3QUHm4p5Avh2_5Ck7dbn-m4
 2. Using audio_dec.py we get a url :http://tiny.cc/72nwdz
 3. The url has a data file
 4. The data file has text which is reversed
