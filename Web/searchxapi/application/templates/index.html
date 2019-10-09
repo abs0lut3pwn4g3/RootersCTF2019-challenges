@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="content-section">
+  <form action="{{ url_for('index') }}" method="POST">
+    <h3 class="border-top border-bottom">Search Form</h3>
+    <fieldset>
+      <div class="form-group">
+        <label class="form-control-label">URL</label>
+        <input class="form-control width-100" name="url" placeholder="https://searchxapi.rootersctf.in/books" type="text">
+      </div>
+    </fieldset>
+    <fieldset>
+      <div class="form-group">
+        <label class="form-control-label">Search Term</label>
+        <input class="form-control width-100" name="search_term" placeholder="Hacking: The Art of Exploitation"
+          type="text">
+      </div>
+    </fieldset>
+    <input type="submit" class="btn btn-dark mb-2" id="submit" value="Search">
+  </form>
+
+  {% if data %}
+  <h3 class="border-top border-bottom">Result</h3>
+  <div class="content-section">
+    <ul>
+      {% for d in data %}
+      <li>{{ d | e }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
+</div>
+{% endblock %}
