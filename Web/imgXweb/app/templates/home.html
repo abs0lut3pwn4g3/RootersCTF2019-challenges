@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="content-section">
+	{% if user %}
+	<div class="d-flex align-items-center flex-wrap justify-content-between">
+		{% for img in images %}
+		<img class="p-2" style="width:150px;height:150px" src="static/{{ user_hash }}/{{ img.name }}" alt="{{ img.name }}">
+		{% endfor %}
+	</div>
+	<form method="POST" enctype="multipart/form-data" action="{{ url_for('home') }}">
+		<fieldset class="form-group mt-5">
+			<legend class="border-top border-bottom mt-2 mb-4">Upload new File(Max. size 1 mb)</legend>
+			<div class="form-group">
+				<input class="form-control" type="file" name="file">
+			</div>
+		</fieldset>
+		<div class="form-group">
+			<button type="submit" class="btn btn-info">Upload</button>
+		</div>
+	</form>
+	{% else %}
+	<h2>Please Login to post and view content!</h2>
+	{% endif %}
+
+</div>
+{% endblock %}
