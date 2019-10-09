@@ -49,6 +49,7 @@ void run(char *prompt){
 
 
 void main(){
+	setvbuf(stdout, NULL, _IONBF, 0);
 	char prompt[0x128];
 	char pwd[0x128];
 	while(1){
