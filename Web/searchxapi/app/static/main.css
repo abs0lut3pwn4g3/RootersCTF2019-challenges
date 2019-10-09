@@ -1,0 +1,80 @@
+body {
+  background: #fafafa;
+  color: #333333;
+  margin-top: 5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #444444;
+}
+
+.bg-steel {
+  background-color: #5f788a;
+}
+
+.site-header .navbar-nav .nav-link {
+  color: #cbd5db;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+
+.site-header .navbar-nav .nav-link.active {
+  font-weight: 500;
+}
+
+.content-section {
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 40px;
+}
+
+/* Custom */
+.inline {
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 0 1rem 0 1rem;
+}
+
+.badge {
+  font-size: 10px;
+  height: 1rem !important;
+}
+
+.form-control-number {
+  width: 3.5rem !important;
+}
+
+#logo {
+  height: 40px;
+  width: 40px;
+  margin-right: 5px;
+}
+
+/* FOOTER */
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0 !important;
+  margin-bottom: 0; 
+  width: 100%;
+  height: 3rem;
+  padding-top: 0.9rem;
+  background-color: #5f788a !important;
+  color: white !important;
+  text-align: center;
+  font-size: 12px;
+  }
+
+footer i {
+  color: white;
+}
+
+#footer-container i:hover {
+  opacity: 0.6 !important; 
+}
