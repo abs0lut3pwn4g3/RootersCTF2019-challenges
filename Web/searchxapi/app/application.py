@@ -4,14 +4,14 @@ from bs4 import BeautifulSoup
 
 app = Flask(__name__)
 
-app.secret_key = "fuk9dfuk511asddasd2130fukbddbee2fuk"
+app.secret_key = "fuk9dfuk511asddadasd2130fukbddbee2fuk"
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
 	if request.method == 'POST':
 		regex = re.compile(
         r'^(?:http)s?://' # http:// or https://
-        r'(?:127.0.0.1)' #domain...
+        r'(?:searchxapi.rootersctf.in)' #domain...
         r'(?::\d+)?' # optional port
         r'(?:/?|[/?]\S+)$', re.IGNORECASE)
 		url = request.form.get('url')
