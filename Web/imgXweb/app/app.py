@@ -10,7 +10,7 @@ from flask_sslify import SSLify
 
 app = Flask(__name__)
 app.secret_key = "p3d5c6cd65752b6fab43lc3f32705a58"
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
+app.config['SQLALCHEMY_DATABASE_URI'] =  'sqlite:///site.db'  #os.environ.get('DATABASE_URL')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['STATIC_FOLDER'] = 'static'
 app.config['ALLOWED_EXTENSIONS'] = set(['png', 'jpg', 'jpeg', 'gif'])
@@ -24,7 +24,6 @@ if 'DYNO' in os.environ:  # only trigger SSLify if the app is running on Heroku
 	sslify = SSLify(app)
 
 ''' Models '''
-
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
