@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+	<title>notifyXAPI</title>
+</head>
+
+<body>
+	<header class="site-header">
+		<nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+			<div class="container">
+				<a class="navbar-brand mr-4" href="/">notifyXAPI</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle"
+					aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarToggle">
+					<div class="navbar-nav mr-auto">
+						<a class="nav-item nav-link" href="{{ url_for('home') }}">Home</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<main role="main" class="container">
+		<div class="row">
+			<div class="col-md-12">
+				{% with messages = get_flashed_messages(with_categories=true) %}
+				{% if messages %}
+				{% for category, message in messages %}
+				<div class="alert alert-{{ category }}">
+					{{ message }}
+				</div>
+				{% endfor %}
+				{% endif %}
+				{% endwith %}
+
+				<!-- Block -->
+
+				<div class="content-section">
+					<h2 class="title-heading">Authentication</h2>
+					<div class="content-section">
+						<h3 class="title-heading">Register</h3>
+						<hr />
+						<pre class="content-section codeblock">
+$ curl -X POST "https://notifyxapi.rootersctf.in/api/v1/register/" -H "Content-Type: application/json" \
+-d '{"email": "test@test.com", "password": "password"}'
+						</pre>
+						<samp class="content-section">{ ... "authentication_token": "j.w.t" }</samp>
+					</div>
+
+					<div class="content-section">
+						<h3 class="title-heading">Login</h3>
+						<hr />
+						<pre class="content-section codeblock">
+$ curl -X POST "https://notifyxapi.rootersctf.in/api/v1/login/" -H "Content-Type: application/json" \
+-d '{"email": "test@test.com", "password": "password"}'
+						</pre>
+						<samp class="content-section">{ ... "authentication_token": "j.w.t" }</samp>
+					</div>
+					<h2 class="title-heading">Creating Notifications</h2>
+					<div class="content-section">
+						<h3 class="title-heading">Using the Access Token</h3>
+						<hr />
+						<blockquote class="blockquote-footer">
+							Source: <a target="_blank"
+								href="https://flask-jwt-extended.readthedocs.io/en/latest/basic_usage.html">
+								https://flask-jwt-extended.readthedocs.io/en/latest/basic_usage.html</a></blockquote>
+						<pre class="content-section codeblock">
+$ export ACCESS="j.w.t"
+$ curl -H "Authorization: Bearer $ACCESS" "https://notifyxapi.rootersctf.in/api/v1/notifications/"
+							</pre>
+					</div>
+
+				</div>
+
+				<!-- END BLOCK -->
+			</div>
+		</div>
+	</main>
+</body>
+
+</html>

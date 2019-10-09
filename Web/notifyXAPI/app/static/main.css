@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600");
+
+body {
+  background: #2c2f36;
+  color: #C9D3E7 !important;
+  margin-top: 5rem;
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  line-height: 1.65;
+  font-size: 12pt;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #C9D3E7;
+}
+
+hr {
+  background-color: #C9D3E7;
+}
+
+.bg-steel {
+  background-color: #101010;
+}
+
+.site-header .navbar-nav .nav-link {
+  color: #bbbbbb;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+  color: #ce1b28;
+}
+
+.site-header .navbar-nav .nav-link.active {
+  font-weight: 500;
+}
+
+a.red-link {
+  color: #ce1b28 !important;
+  font-size: 17px;
+}
+
+a.red-link:hover {
+  text-decoration: underline !important;
+}
+
+a.red-underlined-link {
+  color: #ce1b28 !important;
+  text-decoration: underline;
+}
+
+a:hover, .btn-hover-red:hover {
+  color: #ce1b28 !important;
+  text-decoration: none !important;
+}
+
+.title-heading {
+  color: #C9D3E7 !important;
+}
+
+
+/* custom bootstrap */
+
+
+.content-section, .jumbotron {
+  background: rgba(35,36,39,0.95);
+  padding: 10px 20px;
+  color: #C9D3E7;
+  border: 1px solid #2c2f36;
+  box-shadow: 0 9px 18px 0 rgba(0,0,0,0.25);
+  box-sizing: border-box;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+.codeblock {
+  padding: 5px 15px 0px 15px;
+  color: #e83e8c;
+}
