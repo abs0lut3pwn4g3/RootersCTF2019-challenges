@@ -8,7 +8,6 @@ from src.users.models import User
 from flask_jwt_extended.exceptions import InvalidHeaderError, NoAuthorizationError, JWTExtendedException
 
 class Notifications_api(Resource):
-    model = Notification
 
     @jwt_required
     def get(self):
@@ -16,9 +15,9 @@ class Notifications_api(Resource):
             current_user_id = get_jwt_identity()
             user = User.query.get(current_user_id)
             if user.is_admin:
-                all_notifs = self.model.query.all()
+                all_notifs = Notification.query.all()
             else:
-                all_notifs = self.model.query.filter(self.model.issuer.is_admin == False).all()
+                all_notifs = Notification.query.join(User).filter(User.is_admin == False).all()
             return jsonify(notifications_schema.dump(all_notifs).data)
         except (InvalidHeaderError, NoAuthorizationError, JWTExtendedException) as e:
             return make_response(jsonify({'meta': {'code': 404, 'error': str(e) }}), 404)
