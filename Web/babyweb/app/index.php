@@ -22,7 +22,7 @@ if(isset($_GET['search'])){
 			while($row = mysqli_fetch_array($result)){
                         	$pass = $row['uniqueid'];
 			}
-			header("Location: http://localhost/flag0flag0123456789.php?id=".$pass);
+			header("Location: https://babyweb.rootersctf.in/flag0flag0123456789.php?id=".$pass);
 			die();
 		}
 
