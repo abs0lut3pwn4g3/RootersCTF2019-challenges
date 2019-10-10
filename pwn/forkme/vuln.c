@@ -16,10 +16,6 @@ void getMessage(int clientfd) {
 
 void vuln(int clientfd) {
     char decline[] = "No way you are getting any flag!!!";
-    close(0);
-    close(1);
-    dup(clientfd);
-    dup(clientfd);
     getMessage(clientfd);
     write(1, decline, strlen(decline));
     close(clientfd);
