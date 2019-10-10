@@ -10,14 +10,14 @@
 void getMessage(int clientfd) {
     char buffer[128];
     char message[] = "What do you want?\n";
-    write(1, message, strlen(message));
-    read(0, buffer, 0x128);
+    write(clientfd, message, strlen(message));
+    read(clientfd, buffer, 0x128);
 }
 
 void vuln(int clientfd) {
     char decline[] = "No way you are getting any flag!!!";
     getMessage(clientfd);
-    write(1, decline, strlen(decline));
+    write(clientfd, decline, strlen(decline));
     close(clientfd);
     exit(0);
 }
