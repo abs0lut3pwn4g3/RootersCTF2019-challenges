@@ -1,9 +1,9 @@
 version: "3"
 
 services:
-  iloveflask:
+  searchxapi:
     build: .
+    container_name: searchXAPI
     ports:
-      - 5050:8080
+      - 4040:8080
     restart: always
-    container_name: iloveflask

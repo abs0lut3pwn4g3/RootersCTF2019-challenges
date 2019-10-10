@@ -1,9 +1,9 @@
 version: "3"
 
 services:
-  iloveflask:
+  imgxweb:
     build: .
+    container_name: imageXAPI
     ports:
-      - 5050:8080
+      - 6060:8080
     restart: always
-    container_name: iloveflask
