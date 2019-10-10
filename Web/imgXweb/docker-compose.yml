@@ -7,13 +7,3 @@ services:
     ports:
       - 6060:8080
     restart: always
-    depends_on: 
-        -  database
-    environment:
-        DATABASE_URL: postgres://user:password@database/image
-  database:
-    image: postgres
-    environment:
-        POSTGRES_PASSWORD: password
-        POSTGRES_USER: user
-        POSTGRES_DB: image
